@@ -25,8 +25,8 @@ jobs:
             - run: chmod 600 "$HOME/.ssh/key"
 
             # build
-            - run: cd ./frontend-react/ && npm ci
-            - run: cd ./frontend-react/ && npm run build
-            - run: cd ./frontend-react/ && ls -la
+            - run: cd ./react-app/ && npm ci
+            - run: cd ./react-app/ && npm run build
+            - run: cd ./react-app/ && ls -la
             # deploy
-            - run: cd ./frontend-react/build && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . ermin@92.63.105.147:/var/www/mixail.ermin33.fvds.ru/html/
+            - run: cd ./react-app/build && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . ermin@92.63.105.147:/var/www/mixail.ermin33.fvds.ru/html/
