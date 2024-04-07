@@ -1,0 +1,32 @@
+name: Deploy
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                node-version: [20, 18]
+        
+        steps:
+            - uses: actions/checkout@v4
+            - uses: actions/setup-node@v4
+              with:
+                node-version: ${{ matrix.node-version }}
+
+            # setup key
+            - run: setup -eu
+            - run: mkdir "$HOME/.ssh"
+            - run: echo "${{ secrets.key }}" > "$HOME/.ssh/key"
+            - run: chmod 600 "$HOME/.ssh/key"
+
+            # build
+            - run: cd ./frontend-react/ && npm ci
+            - run: npm run build
+
+            # deploy
+            - run: cd dist && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . ermin@92.63.105.147:/var/www/mixail.ermin33.fvds.ru/html/
