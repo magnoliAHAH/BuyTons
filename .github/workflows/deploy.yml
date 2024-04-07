@@ -29,4 +29,4 @@ jobs:
             - run: cd ./frontend-react/ && npm run build
 
             # deploy
-            - run: cd dist && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . ermin@92.63.105.147:/var/www/mixail.ermin33.fvds.ru/html/
+            - run: cd ./frontend-react/dist && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . ermin@92.63.105.147:/var/www/mixail.ermin33.fvds.ru/html/
