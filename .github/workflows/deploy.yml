@@ -29,4 +29,4 @@ jobs:
             - run: cd ./react-app/ && npm run build
             - run: cd ./react-app/ && ls -la
             # deploy
-            - run: cd ./react-app/build && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . ermin@92.63.105.147:/var/www/mixail.ermin33.fvds.ru/html/
+            - run: cd ./react-app/dist && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . ermin@92.63.105.147:/var/www/mixail.ermin33.fvds.ru/html/
