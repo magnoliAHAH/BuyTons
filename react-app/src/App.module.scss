@@ -1,0 +1,86 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  //background: linear-gradient(to top, #8860D0, #84CEEB);
+  background:
+  radial-gradient(
+    circle at 50% 0,
+    rgba(131, 236, 255, 0.5),
+    rgba(238, 211, 250, 0.39) 70.71%
+  ),
+  radial-gradient(
+    circle at 6.7% 75%,
+    rgb(236, 213, 255),
+    rgba(64, 64, 206, 0.363) 70.71%
+  ),
+  radial-gradient(
+      circle at 93.3% 75%,
+      #dbfaff,
+      #73cffd 70.71%
+    ) rgb(238, 252, 253);
+border-radius: 0%;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.layout{
+  padding: 20px;
+
+}
+.standart_button {
+  background: linear-gradient(to right, #8860D0, #5AB9EA);
+  border: none;
+  float: right;
+  height: 15%;
+}
+
+.changer {
+  padding: 0px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.171);
+  border-radius: 10px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+input {
+  background-color: transparent;
+  border: 2px solid #0200966c;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 200px;
+  border-radius: 10px;
+}
+
+.payDescription {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: -20px;
+}
