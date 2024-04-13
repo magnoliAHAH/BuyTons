@@ -37,11 +37,11 @@ body {
   background-position: center;
 
   background-size: contain;
+  box-shadow: none;
+  cursor: default;
 }
 
-.monsterButton:focus {
-  outline: none;
-}
+
 
 .plate {
   background-color: rgb(0, 49, 58);
@@ -50,5 +50,5 @@ body {
   text-align: center;
   margin-bottom: 20px;
   font-size: 30px;
-  
+  color: white;
 }
