@@ -45,7 +45,11 @@ header {
   background: linear-gradient(to right, #8860D0, #5AB9EA);
   border: none;
   float: right;
-  height: 15%;
+  height: 100%;
+}
+
+.valute {
+  color: red;
 }
 
 .changer {
@@ -68,14 +72,20 @@ header {
 
 }
 
-
 input {
   background-color: transparent;
-  border: 2px solid #0200966c;
+  border: 0px solid #ec04ec6c;
   padding: 10px;
-  margin-bottom: 10px;
+
   width: 200px;
-  border-radius: 10px;
+  border-radius: 0px;
+}
+
+.divInput {
+  background-color: transparent;
+  border: 2px solid #0200966c;
+  border-radius: 15px;
+  
 }
 
 .payDescription {

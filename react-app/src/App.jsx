@@ -26,7 +26,11 @@ export function App() {
         
         <div className={styles.payDescription}>
           <p >You pay</p>
-          <input type="number" name="amount" placeholder="Enter..."/>
+          <div className={styles.divInput}>
+            <input type="number" name="amount" placeholder="Enter..."/>
+            <button id={styles.valute} className={styles.standart_button}>RUB</button>
+          </div>
+          
         </div>
         <div className={styles.payDescription}>
           <p >You got</p>
