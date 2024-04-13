@@ -6,91 +6,49 @@
 }
 
 body {
-  //background: linear-gradient(to top, #8860D0, #84CEEB);
-  background:
-  radial-gradient(
-    circle at 50% 0,
-    rgba(131, 236, 255, 0.5),
-    rgba(238, 211, 250, 0.39) 70.71%
-  ),
-  radial-gradient(
-    circle at 6.7% 75%,
-    rgb(236, 213, 255),
-    rgba(64, 64, 206, 0.363) 70.71%
-  ),
-  radial-gradient(
-      circle at 93.3% 75%,
-      #dbfaff,
-      #73cffd 70.71%
-    ) rgb(238, 252, 253);
-border-radius: 0%;
-}
+  background-color: antiquewhite;
 
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+}
+.BG {
+  //background-color: red;
+  height: 65vh;
+  width: 65vh;
+
+
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 10px;
-}
+  flex-direction: column;
+  align-items: center;
 
-.layout{
-  padding: 20px;
 
-}
-.standart_button {
-  background: linear-gradient(to right, #8860D0, #5AB9EA);
-  border: none;
-  float: right;
-  height: 100%;
-}
-
-.valute {
-  color: red;
-}
-
-.changer {
-  padding: 0px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  background-color: rgba(255, 255, 255, 0.171);
-  border-radius: 10px;
-
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 300px;
-  height: 300px;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
+  position: absolute;
 }
 
-input {
+.monsterButton {
+  width: 80%;
+  height: 80%;
+  background-image: url('coin-2.png');
+  background-size: cover;
+  border-radius: 100%;
   background-color: transparent;
-  border: 0px solid #ec04ec6c;
-  padding: 10px;
 
-  width: 200px;
-  border-radius: 0px;
+  background-position: center;
+
+  background-size: contain;
 }
 
-.divInput {
-  background-color: transparent;
-  border: 2px solid #0200966c;
-  border-radius: 15px;
+.monsterButton:focus {
+  outline: none;
+}
+
+.plate {
+  background-color: rgb(0, 49, 58);
+  border-radius: 10px;
+  padding: 2px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 30px;
   
-}
-
-.payDescription {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-top: -20px;
 }
