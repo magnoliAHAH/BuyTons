@@ -59,7 +59,7 @@ export function App() {
           {MENU.map(
             item => 
             <button href={item.link} style={{display: 'inline-grid'}}>
-              <img src={item.img} style={{width: 70}}></img>
+              <img src={item.img} style={{width: '8vh'}}></img>
               {item.name}
             </button>
           )}
