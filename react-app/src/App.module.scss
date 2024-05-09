@@ -39,6 +39,7 @@ body {
   background-size: contain;
   box-shadow: none;
   cursor: default;
+  padding: 250px;
 }
 
 
@@ -51,4 +52,17 @@ body {
   margin-bottom: 20px;
   font-size: 30px;
   color: white;
+}
+
+.connectButton {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+}
+
+.footerApp {
+  position: absolute;
+  bottom: 100%;
+  width: 100px;
+  height: 100px;
 }
