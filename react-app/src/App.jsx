@@ -38,35 +38,32 @@ export function App() {
   return (
     <TonConnectUIProvider manifestUrl="https://mixail.ermin33.fvds.ru/tonconnect-manifest.json">
 
-
-      <div className={styles.BG}>
-
         {/* Кнопка подключения */}
         <div className={styles.connectButton}>
           <TonConnectButton/>
         </div>
 
-        {/* Счётчик монет */}
+        {/* Счётчик */}
         <div className={styles.plate}>
           <counter className={styles.counter}>{counter}</counter>
         </div>
 
-        {/* Кнопка для клика */}
-        <button onClick={() => setCounter(counter + 1)} className={styles.monsterButton}></button>
+        {/* Клик кнопка */}
+        <div className={styles.clickArea}>
+          <button onClick={() => setCounter(counter + 1)} className={styles.coinButton}></button>
+        </div>
 
-        {/* Нижняя панель кнопок*/}
-        <div style={{display: 'inline-block'}}>
-
+        {/* Навигация */}
+        <div className={styles.navBar}>
           {MENU.map(
-            item => 
-            <button href={item.link} style={{display: 'inline-grid'}}>
-              <img src={item.img} style={{width: '8vh'}}></img>
-              {item.name}
-            </button>
-          )}
+              item => 
+              <button href={item.link} style={{display: 'inline-grid', width: "25%", backgroundColor: 'white', opacity: '0.8', color: 'black'}}>
+                <img src={item.img} style={{width: '90%'}}></img>
+                {item.name}
+              </button>
+            )}
+        </div>
 
-        </div>        
-      </div>
     </TonConnectUIProvider>
   );
 }
