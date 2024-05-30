@@ -14,7 +14,7 @@ body {
 }
 .navBar {
   position: absolute;
-  bottom: 2%;
+  bottom: 10%;
   left: 2%;
   right: 2%;
   display: flex;
@@ -24,7 +24,7 @@ body {
 .clickArea {
   position: absolute;
   left: 50%;
-  top: 60%;
+  top: 50%;
   width: 40vh;
   height: 40vh;
   transform: translate(-50%, -50%);
@@ -41,7 +41,7 @@ body {
 
 .plate {
   position: absolute;
-  top: 20%;
+  top: 15%;
   height: 10vh;
   left: 10%;
   right: 10%;
