@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import styles from '../App.module.scss';
 import { TonConnectButton, TonConnectUIProvider } from '@tonconnect/ui-react';
+import { Link } from 'react-router-dom';
 
 const MENU = [
   {
@@ -53,13 +54,14 @@ export function Home() {
         </div>
         {/* Навигация */}
         <div className={styles.navBar}>
-          {MENU.map(
-              item => 
-              <button href={item.link} style={{display: 'inline-grid', width: "25%", backgroundColor: 'white', opacity: '0.8', color: 'black'}}>
-                <img src={item.img} style={{width: '90%'}}></img>
-                {item.name}
-              </button>
-            )}
+            {MENU.map(item => (
+                <Link to={item.link} key={item.name} style={{ display: 'inline-grid', width: "25%" }}>
+                <button style={{ backgroundColor: 'white', opacity: '0.8', color: 'black' }}>
+                    <img src={item.img} alt={item.name} style={{ width: '90%' }} />
+                    {item.name}
+                </button>
+                </Link>
+            ))}
         </div>
 
     </TonConnectUIProvider>
