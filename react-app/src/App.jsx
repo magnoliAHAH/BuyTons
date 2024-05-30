@@ -32,7 +32,8 @@ const MENU = [
 
 
 export function App() {
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(JSON.parse(localStorage.getItem("counter")));
+  localStorage.setItem("counter", JSON.stringify(counter))
 
   return (
     <TonConnectUIProvider manifestUrl="https://mixail.ermin33.fvds.ru/tonconnect-manifest.json">
